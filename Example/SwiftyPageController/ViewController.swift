@@ -108,6 +108,8 @@ extension UISegmentedControl {
         self.setBackgroundImage(backgroundImage, for: .normal, barMetrics: .default)
         self.setBackgroundImage(backgroundImage, for: .selected, barMetrics: .default)
         self.setBackgroundImage(backgroundImage, for: .highlighted, barMetrics: .default)
+        self.setBackgroundImage(backgroundImage, for: .application, barMetrics: .default)
+        self.setBackgroundImage(backgroundImage, for: .focused, barMetrics: .default)
         
         // deviver image
         let deviderImage = UIImage.getColoredRectImageWith(color: color.cgColor, andSize: CGSize(width: 1.0, height: self.bounds.size.height))
