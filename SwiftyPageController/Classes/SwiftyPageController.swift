@@ -125,6 +125,8 @@ open class SwiftyPageController: UIViewController {
         }
     }
     
+    public var isGestureActive: Bool = true
+    
     fileprivate var nextIndex: Int?
     fileprivate var isAnimating = false
     fileprivate var previousTopLayoutGuideLength: CGFloat!
@@ -169,7 +171,9 @@ open class SwiftyPageController: UIViewController {
     fileprivate func setupController() {
         // setup pan gesture
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanAction(_:)))
-        view.addGestureRecognizer(panGesture)
+        if isGestureActive {
+            view.addGestureRecognizer(panGesture)
+        }
         
         // setup container view
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -312,7 +316,7 @@ open class SwiftyPageController: UIViewController {
         timerForInteractiveTransition = Timer.scheduledTimer(timeInterval: timeInterval / timerVelocity, target: self, selector: #selector(finishAnimationTransition), userInfo: nil, repeats: true)
     }
     
-    func finishAnimationTransition() {
+    @objc func finishAnimationTransition() {
         if let fromController = fromControllerInteractive, let toController = toControllerInteractive {
             let timeOffset: Double = Double(animator.controller.animationProgress) * Double(animator.controller.animationDuration)
             let delta: Float = 0.002
@@ -395,7 +399,7 @@ open class SwiftyPageController: UIViewController {
         }
     }
     
-    func handlePanAction(_ sender: UIPanGestureRecognizer) {
+    @objc func handlePanAction(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         switch sender.state {
         case .changed:

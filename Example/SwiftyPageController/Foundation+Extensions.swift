@@ -8,7 +8,13 @@
 
 import Foundation
 
-extension MutableCollection where Indices.Iterator.Element == Index {
+extension MutableCollection {
+    
+    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+
     /// Shuffles the contents of this collection.
     mutating func shuffle() {
         let c = count
@@ -18,7 +24,7 @@ extension MutableCollection where Indices.Iterator.Element == Index {
             let d: IndexDistance = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
             guard d != 0 else { continue }
             let i = index(firstUnshuffled, offsetBy: d)
-            swap(&self[firstUnshuffled], &self[i])
+            self.swapAt(firstUnshuffled, i)
         }
     }
 }
