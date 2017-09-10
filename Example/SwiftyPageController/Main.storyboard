@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,15 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-AG-NLS">
-                                <rect key="frame" x="0.0" y="109" width="320" height="459"/>
+                                <rect key="frame" x="0.0" y="106" width="320" height="462"/>
                                 <connections>
                                     <segue destination="jbf-8R-XV3" kind="embed" id="dOs-g2-FDI"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-y3-a9J">
-                                <rect key="frame" x="8" y="72" width="304" height="30"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="304" id="HKK-Fk-T4F"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="HKK-Fk-T4F"/>
                                     <constraint firstAttribute="height" constant="29" id="dv0-l2-PjH"/>
                                 </constraints>
                                 <segments>
@@ -43,32 +42,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="top" secondItem="hd5-y3-a9J" secondAttribute="bottom" constant="8" symbolic="YES" id="3kF-Xw-BOn"/>
                             <constraint firstItem="hd5-y3-a9J" firstAttribute="top" secondItem="W57-jG-xNh" secondAttribute="bottom" constant="8" id="3v9-Lu-ZTV"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="top" secondItem="hd5-y3-a9J" secondAttribute="bottom" constant="8" id="4qN-Md-h0R"/>
-                            <constraint firstItem="mDc-QE-qHs" firstAttribute="top" secondItem="9LD-AG-NLS" secondAttribute="bottom" id="5U4-8i-dZE"/>
-                            <constraint firstItem="hd5-y3-a9J" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leadingMargin" constant="-8" id="6Iu-zD-vpf"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="bottom" secondItem="mDc-QE-qHs" secondAttribute="top" id="A5i-6g-hWd"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="COZ-dG-Eg9"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="top" secondItem="kbA-7w-A0p" secondAttribute="top" constant="109" id="EtZ-lY-rO4"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leadingMargin" constant="-16" id="If3-Jj-w4Z"/>
+                            <constraint firstAttribute="trailing" secondItem="9LD-AG-NLS" secondAttribute="trailing" id="AuC-by-NJB"/>
                             <constraint firstItem="hd5-y3-a9J" firstAttribute="top" secondItem="kbA-7w-A0p" secondAttribute="top" constant="72" id="LmF-hH-Cgf"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="PiL-ea-edH"/>
-                            <constraint firstAttribute="bottom" secondItem="9LD-AG-NLS" secondAttribute="bottom" id="TfX-xz-lSv"/>
-                            <constraint firstItem="hd5-y3-a9J" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" constant="8" id="bGf-Oa-P6J"/>
+                            <constraint firstItem="9LD-AG-NLS" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="MSi-hW-xDR"/>
+                            <constraint firstItem="hd5-y3-a9J" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="bGf-Oa-P6J"/>
                             <constraint firstItem="hd5-y3-a9J" firstAttribute="top" secondItem="kbA-7w-A0p" secondAttribute="top" constant="72" id="btS-QM-Jij"/>
-                            <constraint firstAttribute="trailing" secondItem="9LD-AG-NLS" secondAttribute="trailing" id="dEO-eB-DY7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hd5-y3-a9J" secondAttribute="trailing" constant="-8" id="eE9-HX-Xki"/>
-                            <constraint firstItem="hd5-y3-a9J" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" constant="8" id="epb-Gm-ERc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9LD-AG-NLS" secondAttribute="trailing" constant="-16" id="f9N-nR-EG4"/>
-                            <constraint firstItem="hd5-y3-a9J" firstAttribute="centerX" secondItem="9LD-AG-NLS" secondAttribute="centerX" id="fRD-zU-k61"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="jfx-oA-XLh"/>
-                            <constraint firstItem="hd5-y3-a9J" firstAttribute="centerX" secondItem="kbA-7w-A0p" secondAttribute="centerX" id="lYU-dZ-Dtx"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="centerX" secondItem="kbA-7w-A0p" secondAttribute="centerX" id="mzG-Vd-T0M"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="top" secondItem="kbA-7w-A0p" secondAttribute="top" constant="109" id="pWM-UT-3Rc"/>
-                            <constraint firstAttribute="bottom" secondItem="9LD-AG-NLS" secondAttribute="bottom" id="pbd-ff-WIS"/>
-                            <constraint firstItem="9LD-AG-NLS" firstAttribute="bottom" secondItem="kbA-7w-A0p" secondAttribute="bottomMargin" id="t9F-u2-yle"/>
-                            <constraint firstAttribute="trailing" secondItem="9LD-AG-NLS" secondAttribute="trailing" id="w8m-r1-JJS"/>
+                            <constraint firstItem="hd5-y3-a9J" firstAttribute="leading" secondItem="kbA-7w-A0p" secondAttribute="leading" id="epb-Gm-ERc"/>
+                            <constraint firstItem="mDc-QE-qHs" firstAttribute="top" secondItem="9LD-AG-NLS" secondAttribute="bottom" id="jii-ZA-sAG"/>
+                            <constraint firstItem="hd5-y3-a9J" firstAttribute="centerX" secondItem="kbA-7w-A0p" secondAttribute="centerX" priority="750" id="lYU-dZ-Dtx"/>
+                            <constraint firstAttribute="trailing" secondItem="hd5-y3-a9J" secondAttribute="trailing" id="ljt-1e-9Jr"/>
+                            <constraint firstItem="9LD-AG-NLS" firstAttribute="top" secondItem="hd5-y3-a9J" secondAttribute="bottom" constant="5" id="rLl-JN-RUy"/>
                             <constraint firstItem="hd5-y3-a9J" firstAttribute="top" secondItem="W57-jG-xNh" secondAttribute="bottom" constant="8" symbolic="YES" id="x6L-Pp-s8y"/>
                         </constraints>
                     </view>
@@ -150,7 +134,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ylf-0m-kNb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFill" id="5ym-dc-xwW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="462"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

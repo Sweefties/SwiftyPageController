@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var segmentControl: UISegmentedControl! {
         didSet {
-            segmentControl.addUnderlineForSelectedSegment()
+            segmentControl.addUnderlineForSelectedSegment(height: 5.0)
+            //segmentControl.isMomentary = true
         }
     }
     
