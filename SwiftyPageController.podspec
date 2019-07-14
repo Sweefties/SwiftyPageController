@@ -19,7 +19,7 @@ Advantages:
   s.homepage         = 'https://github.com/alkhokhlov/SwiftyPageController'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alkhokhlov' => 'alkhokhlovv@gmail.com' }
-  s.source           = { :git => 'https://github.com/alkhokhlov/SwiftyPageController.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Sweefties/SwiftyPageController.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 

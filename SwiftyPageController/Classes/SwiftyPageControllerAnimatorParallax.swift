@@ -47,7 +47,7 @@ open class SwiftyPageControllerAnimatorParallax: SwiftyPageControllerAnimatorPro
         animationPositionToController.duration = animationDuration
         animationPositionToController.fromValue = animationDirection == .left ? (toController.view.frame.width * 1.5) : (-toController.view.frame.width / 2.0)
         animationPositionToController.toValue = toController.view.frame.width / 2.0
-        animationPositionToController.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animationPositionToController.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         
         toController.view.layer.add(animationPositionToController, forKey: toControllerAnimationIdentifier)
         

@@ -81,7 +81,7 @@ extension ViewController: SwiftyPageControllerDelegate {
     }
     
     func swiftyPageController(_ controller: SwiftyPageController, didMoveToController toController: UIViewController) {
-        segmentControl.selectedSegmentIndex = containerController.viewControllers.index(of: toController)!
+        segmentControl.selectedSegmentIndex = containerController.viewControllers.firstIndex(of: toController)!
     }
     
     func swiftyPageController(_ controller: SwiftyPageController, willMoveToController toController: UIViewController) {
@@ -118,17 +118,17 @@ extension UISegmentedControl {
         
         // normal title text attributes
         if let attr = normalTextAttributes {
-            self.setTitleTextAttributes(attr, for: .normal)
+            self.setTitleTextAttributes((attr as! [NSAttributedString.Key : Any]), for: .normal)
         }
         else{
-            self.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.gray], for: .normal)
+            self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         }
         // selected title text attributes
         if let attr = selectedTextAttributes {
-            self.setTitleTextAttributes(attr, for: .selected)
+            self.setTitleTextAttributes((attr as! [NSAttributedString.Key : Any]), for: .selected)
         }
         else{
-            self.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], for: .selected)
+            self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
         }
     }
     
